@@ -16,7 +16,7 @@ async function execute(module: string, method: string, params: Array<Packable>) 
   body.append("module", module)
   body.append("method", method)
   body.append("params", new Blob([Writable.writeToBytesOrThrow(new Packed(params))]))
-  body.append("effort", new Blob([await generate(10n ** 5n)]))
+  body.append("effort", new Blob([await generate(2n ** BigInt(process.env.EFFORT))]))
 
   const response = await fetch(new URL("/api/execute", process.env.SERVER), { method: "POST", body });
 
