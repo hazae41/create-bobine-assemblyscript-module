@@ -6,8 +6,8 @@ import { Writable } from "@hazae41/binary";
 import { readFileSync } from "node:fs";
 import process from "node:process";
 
-process.loadEnvFile(".env.local")
-process.loadEnvFile(".env")
+process.loadEnvFile("../../.env.local")
+process.loadEnvFile("../../.env")
 
 function parse(texts: string[]): Array<Packable> {
   const values = new Array<Packable>()

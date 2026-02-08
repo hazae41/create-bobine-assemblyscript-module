@@ -5,8 +5,8 @@ import { Packable, Packed } from "@/libs/packed/mod.ts";
 import { Readable, Writable } from "@hazae41/binary";
 import process from "node:process";
 
-process.loadEnvFile(".env.local")
-process.loadEnvFile(".env")
+process.loadEnvFile("../../.env.local")
+process.loadEnvFile("../../.env")
 
 type Proof = [Array<string>, Array<[string, Uint8Array, Uint8Array]>, Array<[string, Uint8Array, Uint8Array]>, Packable, bigint]
 
