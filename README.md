@@ -16,16 +16,22 @@ Reset the Git repository
 rm -rf ./.git && git init
 ```
 
-Install dependencies
-
-```bash
-npm install
-```
-
 If needed modify your server URL in a .env.local file
 
 ```env
 SERVER=http://localhost:8080
+```
+
+Go to the module folder
+
+```bash
+cd ./module
+```
+
+Install dependencies
+
+```bash
+npm install
 ```
 
 Start coding in ./src/mod.ts
