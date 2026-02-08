@@ -21,7 +21,7 @@ async function execute(module: string, method: string, params: Array<Packable>) 
   const response = await fetch(new URL("/api/execute", process.env.SERVER), { method: "POST", body });
 
   if (!response.ok)
-    throw new Error("Failed", { cause: response })
+    throw new Error(await response.text(), { cause: response })
 
   const [logs, reads, writes, returned, sparks] = Readable.readFromBytesOrThrow(Packed, await response.bytes()) as Proof
 
