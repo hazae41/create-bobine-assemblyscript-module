@@ -1,11 +1,9 @@
-// deno-lint-ignore-file no-unused-vars
+/// <reference types="@/libs/bytes/lib.d.ts"/>
 
-/// <reference types="../../libs/bytes/lib.d.ts"/>
-
+import { generate } from "@/libs/effort/mod.ts";
+import { Packable, Packed } from "@/libs/packed/mod.ts";
 import { Readable, Writable } from "@hazae41/binary";
 import process from "node:process";
-import { generate } from "../../libs/effort/mod.ts";
-import { Packable, Packed } from "../../libs/packed/mod.ts";
 
 process.loadEnvFile(".env.local")
 process.loadEnvFile(".env")
