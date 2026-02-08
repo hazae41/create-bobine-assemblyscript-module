@@ -22,10 +22,10 @@ If needed modify your server URL in a .env.local file
 SERVER=http://localhost:8080
 ```
 
-Go to the module folder
+Go to the main module folder
 
 ```bash
-cd ./module
+cd ./mods/main
 ```
 
 Install dependencies
@@ -72,4 +72,4 @@ Hint: for easier development, you can keep the command in a new file, copy-paste
 
 <img width="948" height="749" src="https://github.com/user-attachments/assets/cc89f189-b5bb-4d27-a540-bcf4b5139633" />
 
-And if needed copy the `module` folder to create a new module in the same repository
+And if needed copy the `./mods/main` folder to create a new module in the same repository
